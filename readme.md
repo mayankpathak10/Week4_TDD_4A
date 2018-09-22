@@ -1,8 +1,15 @@
 # C++ Boilerplate
-[![Build Status](https://travis-ci.org/dpiet/cpp-boilerplate.svg?branch=master)](https://travis-ci.org/dpiet/cpp-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/github/dpiet/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dpiet/cpp-boilerplate?branch=master)
+[![Build Status](https://travis-ci.com/mayankpathak10/Week4_TDD_4A.svg?branch=master)](https://travis-ci.com/mayankpathak10/Week4_TDD_4A)
+[![Coverage Status](https://coveralls.io/repos/github/mayankpathak10/Week4_TDD_4A/badge.svg?branch=master)](https://coveralls.io/github/mayankpathak10/Week4_TDD_4A?branch=master)
 ---
-
+ ## Authors
+```
+ Part 1:
+ Driver: Mayank Pathak (mayankpathak10)
+ Navigator: Venkatraman Narayanan
+ @version 1.0
+ @copyright GNU Public License
+```
 ## Overview
 
 Simple starter C++ project with:

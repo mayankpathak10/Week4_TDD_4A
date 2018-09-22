@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/lib.hpp
+iostream
+-
+
+/home/mayank/808X_workspace/Week4/Week4_TDD_4A/app/PID_controller.cpp
+lib.hpp
+/home/mayank/808X_workspace/Week4/Week4_TDD_4A/app/lib.hpp
+
+/home/mayank/808X_workspace/Week4/Week4_TDD_4A/app/main.cpp
+lib.hpp
+/home/mayank/808X_workspace/Week4/Week4_TDD_4A/app/lib.hpp
+iostream
+/home/mayank/808X_workspace/Week4/Week4_TDD_4A/app/iostream
+memory
+/home/mayank/808X_workspace/Week4/Week4_TDD_4A/app/memory
+
