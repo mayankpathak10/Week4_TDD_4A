@@ -32,20 +32,20 @@ TEST(PIDTests, initializationTest) {
  * @brief Class's get and set function test
  */
 TEST(PIDTests, valuesTest) {
-  PID_Controller = std::make_shared<Controller>(0.7, 0.6, 0.32);
+  PID_Controller = std::make_shared<Controller>(<actualkP>, <actualkI>, <actualkD>);
 
-  EXPECT_NEAR(PID_Controller->getkP(), 0.7, 0.00001);
-  EXPECT_NEAR(PID_Controller->getkI(), 0.6, 0.00001);
-  EXPECT_NEAR(PID_Controller->getkD(), 0.32, 0.00001);
+  EXPECT_NEAR(PID_Controller->getkP(), <actual>, <range>);
+  EXPECT_NEAR(PID_Controller->getkI(), <actual>, <range>);
+  EXPECT_NEAR(PID_Controller->getkD(), <actual>, <range>);
 }
 
 /**
  * @brief Test the convergence of logic
  */
 TEST(PIDTests, computeTest) {
-  PID_Controller = std::make_shared<Controller>(0.7, 0.06, 0.32);
+  PID_Controller = std::make_shared<Controller>(<kP>, <kI>, <kD>);
 
-  PID_Controller->compute(12.0);
+  PID_Controller->compute(<target>);
 
   EXPECT_NEAR(PID_Controller->returnState(), 11.9979, 0.0021);
 }
