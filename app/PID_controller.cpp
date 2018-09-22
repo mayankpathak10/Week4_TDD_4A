@@ -66,7 +66,7 @@ double Controller::getkD() {
 }
 
 // get state (output)
-void Controller::setState(double controlOutput) {
+void Controller::setState(double currentState) {
 
   // return state;
 }

@@ -15,18 +15,20 @@
  */
 
 #include <iostream>
-/**
+/** 
  * @brief Class that compute the PID.
  */
 class Controller {
  private:
-  double kP = 0;  // Gain variables as double
-  double kI = 0;  // Gain variables as double
-  double kD = 0;  // Gain variable as double
-  double error = 0.0021;  // an random error introduced
+  double kP = 0.0;  // Gain variables as double
+  double kI = 0.0;  // Gain variables as double
+  double kD = 0.0;  // Gain variable as double
+  double prevError = 0.0;  // previous time-state error
+  double intgError = 0.0;  // integral error
+  double dt = 0.001;  // time step
+  double currentState = 0;
   double controlOutput = 0;
   double output = 0;
-  double state = 0;
   bool initialized = false;
 
  public:
@@ -53,7 +55,7 @@ class Controller {
    * @param      Target  The target state as double
    * @return     none
    */
-  void compute(double target);
+  void compute(double target, double currentState);
 
   /**
    * @brief      Method to get proportional gain
@@ -99,7 +101,7 @@ class Controller {
    * @param      state (output)
    * @return     None
    */
-  void setState(double state);
+  void setState(double current_state);
 
   /**
    * @brief      Method to return output state
