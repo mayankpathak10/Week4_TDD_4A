@@ -55,7 +55,7 @@ class Controller {
    * @param      Target  The target state as double
    * @return     none
    */
-  void compute(double target, double currentState);
+  void compute(double target, double currentstate);
 
   /**
    * @brief      Method to get proportional gain
@@ -68,7 +68,7 @@ class Controller {
    * @param      kP  The proportional gain as double
    * @return     none
    */
-  void setkP(double kP);
+  void setkP(double kp);
 
   /**
    * @brief      Method to get derivative gain
@@ -81,7 +81,7 @@ class Controller {
    * @param      kD  The derivative gain as double
    * @return     none
    */
-  void setkI(double kI);
+  void setkI(double ki);
 
   /**
    * @brief      Method to get integral gain
@@ -94,14 +94,14 @@ class Controller {
    * @param      kI  The integral gain as double
    * @return     none
    */
-  void setkD(double kD);
+  void setkD(double kd);
 
   /**
    * @brief      Method to set output state
    * @param      state (output)
    * @return     None
    */
-  void setState(double current_state);
+  void setState(double currentstate);
 
   /**
    * @brief      Method to return output state

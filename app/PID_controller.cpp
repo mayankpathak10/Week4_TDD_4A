@@ -17,36 +17,36 @@
 
 // Default constructor
 Controller::Controller() {
-
+  initialized = true;
 }
 
 // Override constructor to set all const
-Controller::Controller(double kP, double kI, double kD) {
-
+Controller::Controller(double kp, double ki, double kd) {
+  initialized = true;
 }
 
 // Function to check initialization
 bool Controller::isInitialized() {
-
+  return initialized;
 }
 
 // PID compute
-void Controller::compute(double target, double currentState) {
+void Controller::compute(double target, double currentstate) {
 
 }
 
 // set kP
-void Controller::setkP(double kP) {
+void Controller::setkP(double kp) {
  
 }
 
 // set kP
-void Controller::setkD(double kD) {
+void Controller::setkD(double kd) {
 
 }
 
 // set kI
-void Controller::setkI(double kI) {
+void Controller::setkI(double ki) {
 
 }
 
@@ -66,7 +66,7 @@ double Controller::getkD() {
 }
 
 // get state (output)
-void Controller::setState(double currentState) {
+void Controller::setState(double currentstate) {
 
   // return state;
 }
