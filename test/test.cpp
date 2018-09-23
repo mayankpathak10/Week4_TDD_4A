@@ -45,7 +45,7 @@ TEST(PIDTests, valuesTest) {
 TEST(PIDTests, computeTest) {
   PID_Controller = std::make_shared<Controller>(0.3, 0.05, 0.1);
 
-  PID_Controller->compute(10);
+  PID_Controller->compute(10.0, 0.0);
 
   EXPECT_NEAR(PID_Controller->returnState(), 4.5, 0.001);
 }
