@@ -25,7 +25,7 @@ class Controller {
   double kD = 0.0;  // Gain variable as double
   double prevError = 0.0;  // previous time-state error
   double intgError = 0.0;  // integral error
-  double dt = 0.001;  // time step
+  double dt = 0.1;  // time step
   double currentState = 0;
   double controlOutput = 0;
   double output = 0;
