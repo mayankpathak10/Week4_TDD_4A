@@ -31,7 +31,7 @@ bool Controller::isInitialized() {
 }
 
 // PID compute
-void Controller::compute(double target) {
+void Controller::compute(double target, double currentState) {
 
 }
 
