@@ -39,16 +39,17 @@ bool Controller::isInitialized() {
 
 // PID compute
 void Controller::compute(double target, double currentstate) {
-  double error = target - currentstate;  ///< Define error term
+  double error = target - currentstate;  ///< Error
   intgError += error;  // Accumulate error for integral term
-  double changeInError = (error - prevError) / dt;  ///< Define derivative of error term
+  double changeInError = (error - prevError) / dt;
+  ///< Derivative of error
 
-  // Calculate PID control output
-  // u(t) = kp*e + ki*(summation of error over time) + kd*(change in error from previous time step)
+  /* Calculate PID control output
+   u(t) = kp*e + ki*(summation of error over time)
+   + kd*(change in error from previous time step) */
   controlOutput = kP * error + kI * intgError + kD * changeInError;
 
   prevError = error;  // Set previous error
- 
 }
 
 // set kP
@@ -94,5 +95,4 @@ double Controller::returnState() {
 
 // Default Destructor
 Controller::~Controller() {
-
 }

@@ -26,7 +26,6 @@
  * @return     return 0
  */
 int main() {
-
   // Define initial and target states
   double targetState = 5.0;
   double initialState = 0.0;
