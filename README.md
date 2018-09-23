@@ -14,7 +14,7 @@
 ```
 Part 2:
  Driver: Srinidhi Sreenath (SrinidhiSreenath)
- Navigator: Siddesh Rane (srane96)
+ Navigator: Siddhesh Rane (srane96)
  @version 2.0
  @copyright GNU Public License
 ```
