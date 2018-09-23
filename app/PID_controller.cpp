@@ -20,8 +20,12 @@ Controller::Controller() {
   initialized = true;
 }
 
-// Override constructor to set all const
+// Override constructor to set controller gains
 Controller::Controller(double kp, double ki, double kd) {
+  kP = kp;
+  kD = kd;
+  kI = ki;
+
   initialized = true;
 }
 
@@ -32,7 +36,15 @@ bool Controller::isInitialized() {
 
 // PID compute
 void Controller::compute(double target, double currentstate) {
+  double error = target - currentstate;  ///< Define error term
+  intgError += error;  // Accumulate error for integral term
+  double changeInError = (error - prevError) / dt;  ///< Define derivative of error term
 
+  // Calculate PID control output
+  controlOutput = kP * error + kI * intgError + kD * changeInError;
+
+  prevError = error;  // Set previous error
+ 
 }
 
 // set kP
@@ -42,7 +54,7 @@ void Controller::setkP(double kp) {
 
 // set kP
 void Controller::setkD(double kd) {
-  KD = kd;
+  kD = kd;
 }
 
 // set kI
@@ -65,15 +77,14 @@ double Controller::getkD() {
   return kD;
 }
 
-// get state (output)
+// set state
 void Controller::setState(double currentstate) {
-
-  // return state;
+  currentState = currentstate;
 }
 
 // return state (output)
 double Controller::returnState() {
-
+  return controlOutput;
 }
 
 // Default Destructor
