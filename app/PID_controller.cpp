@@ -37,32 +37,32 @@ void Controller::compute(double target, double currentstate) {
 
 // set kP
 void Controller::setkP(double kp) {
- 
+  kP = kp;
 }
 
 // set kP
 void Controller::setkD(double kd) {
-
+  KD = kd;
 }
 
 // set kI
 void Controller::setkI(double ki) {
-
+  kI = ki;
 }
 
 // get kP
 double Controller::getkP() {
-
+  return kP;
 }
 
 // get kD
 double Controller::getkI() {
-
+  return kI;
 }
 
 // get kI
 double Controller::getkD() {
-
+  return kD;
 }
 
 // get state (output)
