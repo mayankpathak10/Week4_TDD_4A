@@ -22,10 +22,13 @@ Controller::Controller() {
 
 // Override constructor to set controller gains
 Controller::Controller(double kp, double ki, double kd) {
+  std::cout << "PID controller initialized!" << std::endl;
+  // Assign the controller gains to member variables
   kP = kp;
   kD = kd;
   kI = ki;
 
+  // Class initialized
   initialized = true;
 }
 
@@ -41,6 +44,7 @@ void Controller::compute(double target, double currentstate) {
   double changeInError = (error - prevError) / dt;  ///< Define derivative of error term
 
   // Calculate PID control output
+  // u(t) = kp*e + ki*(summation of error over time) + kd*(change in error from previous time step)
   controlOutput = kP * error + kI * intgError + kD * changeInError;
 
   prevError = error;  // Set previous error
@@ -84,6 +88,7 @@ void Controller::setState(double currentstate) {
 
 // return state (output)
 double Controller::returnState() {
+  // Return updated state of the system
   return controlOutput;
 }
 
