@@ -1,6 +1,6 @@
 # C++ Boilerplate
-[![Build Status](https://travis-ci.com/mayankpathak10/Week4_TDD_4A.svg?branch=master)](https://travis-ci.com/mayankpathak10/Week4_TDD_4A)
-[![Coverage Status](https://coveralls.io/repos/github/mayankpathak10/Week4_TDD_4A/badge.svg)](https://coveralls.io/github/mayankpathak10/Week4_TDD_4A)
+[![Build Status](https://travis-ci.com/SrinidhiSreenath/Week4_TDD_4A.svg?branch=master)](https://travis-ci.com/SrinidhiSreenath/Week4_TDD_4A)
+[![Coverage Status](https://coveralls.io/repos/github/SrinidhiSreenath/Week4_TDD_4A/badge.svg?branch=master)](https://coveralls.io/github/SrinidhiSreenath/Week4_TDD_4A?branch=master)
 ---
  ## Authors
 ```
