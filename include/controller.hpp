@@ -1,4 +1,3 @@
-#pragma once
 /**
  *  @file    lib.hpp
  *  @author  Mayank Pathak
@@ -14,6 +13,9 @@
  *
  */
 
+#ifndef INCLUDE_CONTROLLER_HPP_
+#define INCLUDE_CONTROLLER_HPP_
+
 #include <iostream>
 /** 
  * @brief Class that compute the PID.
@@ -25,10 +27,9 @@ class Controller {
   double kD = 0.0;  // Gain variable as double
   double prevError = 0.0;  // previous time-state error
   double intgError = 0.0;  // integral error
-  double dt = 0.001;  // time step
+  double dt = 0.1;  // time step
   double currentState = 0;
   double controlOutput = 0;
-  double output = 0;
   bool initialized = false;
 
  public:
@@ -48,14 +49,14 @@ class Controller {
    * @param      kI  The integral gain as double
    * @param      kD  The derivative gain as double
    */
-  Controller(double kP, double kI, double kD);
+  Controller(const double& kP, const double& kI, const double& kD);
 
   /**
    * @brief      Method for computing multiple step PID
    * @param      Target  The target state as double
    * @return     none
    */
-  void compute(double target, double currentState);
+  void compute(const double& target, const double& currentstate);
 
   /**
    * @brief      Method to get proportional gain
@@ -68,7 +69,7 @@ class Controller {
    * @param      kP  The proportional gain as double
    * @return     none
    */
-  void setkP(double kP);
+  void setkP(const double& kp);
 
   /**
    * @brief      Method to get derivative gain
@@ -81,7 +82,7 @@ class Controller {
    * @param      kD  The derivative gain as double
    * @return     none
    */
-  void setkI(double kI);
+  void setkI(const double& ki);
 
   /**
    * @brief      Method to get integral gain
@@ -94,14 +95,7 @@ class Controller {
    * @param      kI  The integral gain as double
    * @return     none
    */
-  void setkD(double kD);
-
-  /**
-   * @brief      Method to set output state
-   * @param      state (output)
-   * @return     None
-   */
-  void setState(double current_state);
+  void setkD(const double& kd);
 
   /**
    * @brief      Method to return output state
@@ -115,3 +109,4 @@ class Controller {
    */
   ~Controller();
 };
+#endif   // INCLUDE_CONTROLLER_HPP_
