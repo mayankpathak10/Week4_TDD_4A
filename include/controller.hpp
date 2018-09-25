@@ -98,13 +98,6 @@ class Controller {
   void setkD(const double& kd);
 
   /**
-   * @brief      Method to set output state
-   * @param      state (output)
-   * @return     None
-   */
-  void setState(const double& currentstate);
-
-  /**
    * @brief      Method to return output state
    * @param      None
    * @return     double

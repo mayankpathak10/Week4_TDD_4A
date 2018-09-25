@@ -82,11 +82,6 @@ double Controller::getkD() {
   return kD;
 }
 
-// set state
-void Controller::setState(const double& currentstate) {
-  currentState = currentstate;
-}
-
 // return state (output)
 double Controller::returnState() {
   // Return updated state of the system
