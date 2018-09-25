@@ -1,4 +1,3 @@
-#pragma once
 /**
  *  @file    lib.hpp
  *  @author  Mayank Pathak
@@ -13,6 +12,9 @@
  *  for Week 4 exercise.
  *
  */
+
+#ifndef WEEK4_TDD_4A_INCLUDE_CONTROLLER_H_
+#define WEEK4_TDD_4A_INCLUDE_CONTROLLER_H_
 
 #include <iostream>
 /** 
@@ -114,3 +116,4 @@ class Controller {
    */
   ~Controller();
 };
+#endif // WEEK4_TDD_4A_INCLUDE_CONTROLLER_H_
