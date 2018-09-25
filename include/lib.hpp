@@ -28,7 +28,6 @@ class Controller {
   double dt = 0.1;  // time step
   double currentState = 0;
   double controlOutput = 0;
-  double output = 0;
   bool initialized = false;
 
  public:
