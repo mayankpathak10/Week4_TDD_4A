@@ -49,3 +49,15 @@ TEST(PIDTests, computeTest) {
 
   EXPECT_NEAR(PID_Controller->returnState(), 13.5, 0.001);
 }
+
+TEST(PIDTests, setCasesTest) {
+  PID_Controller = std::make_shared<Controller>();
+
+  PID_Controller->setkP(0.3);
+  PID_Controller->setkI(1.5);
+  PID_Controller->setkD(0.06);
+
+  EXPECT_EQ(PID_Controller->getkP(), 0.3);
+  EXPECT_EQ(PID_Controller->getkI(), 1.5);
+  EXPECT_EQ(PID_Controller->getkD(), 0.06);
+}
