@@ -21,7 +21,7 @@ Controller::Controller() {
 }
 
 // Override constructor to set controller gains
-Controller::Controller(double kp, double ki, double kd) {
+Controller::Controller(const double& kp, const double& ki, const double& kd) {
   std::cout << "PID controller initialized!" << std::endl;
   // Assign the controller gains to member variables
   kP = kp;
@@ -38,7 +38,7 @@ bool Controller::isInitialized() {
 }
 
 // PID compute
-void Controller::compute(double target, double currentstate) {
+void Controller::compute(const double& target, const double& currentstate) {
   double error = target - currentstate;  ///< Error
   intgError += error;  // Accumulate error for integral term
   double changeInError = (error - prevError) / dt;
@@ -53,17 +53,17 @@ void Controller::compute(double target, double currentstate) {
 }
 
 // set kP
-void Controller::setkP(double kp) {
+void Controller::setkP(const double& kp) {
   kP = kp;
 }
 
 // set kP
-void Controller::setkD(double kd) {
+void Controller::setkD(const double& kd) {
   kD = kd;
 }
 
 // set kI
-void Controller::setkI(double ki) {
+void Controller::setkI(const double& ki) {
   kI = ki;
 }
 
@@ -83,7 +83,7 @@ double Controller::getkD() {
 }
 
 // set state
-void Controller::setState(double currentstate) {
+void Controller::setState(const double& currentstate) {
   currentState = currentstate;
 }
 

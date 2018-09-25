@@ -47,14 +47,14 @@ class Controller {
    * @param      kI  The integral gain as double
    * @param      kD  The derivative gain as double
    */
-  Controller(double kP, double kI, double kD);
+  Controller(const double& kP, const double& kI, const double& kD);
 
   /**
    * @brief      Method for computing multiple step PID
    * @param      Target  The target state as double
    * @return     none
    */
-  void compute(double target, double currentstate);
+  void compute(const double& target, const double& currentstate);
 
   /**
    * @brief      Method to get proportional gain
@@ -67,7 +67,7 @@ class Controller {
    * @param      kP  The proportional gain as double
    * @return     none
    */
-  void setkP(double kp);
+  void setkP(const double& kp);
 
   /**
    * @brief      Method to get derivative gain
@@ -80,7 +80,7 @@ class Controller {
    * @param      kD  The derivative gain as double
    * @return     none
    */
-  void setkI(double ki);
+  void setkI(const double& ki);
 
   /**
    * @brief      Method to get integral gain
@@ -93,14 +93,14 @@ class Controller {
    * @param      kI  The integral gain as double
    * @return     none
    */
-  void setkD(double kd);
+  void setkD(const double& kd);
 
   /**
    * @brief      Method to set output state
    * @param      state (output)
    * @return     None
    */
-  void setState(double currentstate);
+  void setState(const double& currentstate);
 
   /**
    * @brief      Method to return output state
