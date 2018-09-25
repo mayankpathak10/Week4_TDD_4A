@@ -13,8 +13,8 @@
  *
  */
 
-#ifndef WEEK4_TDD_4A_INCLUDE_CONTROLLER_H_
-#define WEEK4_TDD_4A_INCLUDE_CONTROLLER_H_
+#ifndef INCLUDE_CONTROLLER_HPP_
+#define INCLUDE_CONTROLLER_HPP_
 
 #include <iostream>
 /** 
@@ -116,4 +116,4 @@ class Controller {
    */
   ~Controller();
 };
-#endif // WEEK4_TDD_4A_INCLUDE_CONTROLLER_H_
+#endif   // INCLUDE_CONTROLLER_HPP_
