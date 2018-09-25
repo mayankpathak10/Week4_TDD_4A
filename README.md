@@ -25,6 +25,19 @@ Simple C++ project that implements PID controller with:
 - cmake
 - googletest
 
+## Design review discussion and suggestions ##
+A design review discussion was done with the authors of Part 1 and the following changes and suggestions were made:
+
+1. In the original design, test cases did not cover all the lines to test the class source code and also contained incorrect test cases. The incorrect test cases were corrected and additional test cases were added to make the coverage 100 %.
+
+2. As per the original design, in the controller class, the parameters were passed by value to member functions. The parameters were changed to be passed by reference and as a constant for more efficiency.
+
+3. Naming convention was not as per the Google C++ style in some cases in the original design. Naming conventions were modified as per the styling requirements. One major change was the controller class source and header files naming which was changed to be consistent.
+
+4. The time step ```dt```was defined as a member variable of the ``` Controller``` class with initialization to a value. A better approach would be to take dt as an user input as well.  
+
+5. A member function ```Controller::setState(double currentstate)``` and member variable ```output``` were removed as they weren't necessary.
+
 ## Standard install via command-line
 ```
 git clone https://github.com/SrinidhiSreenath/Week4_TDD_4A.git
@@ -36,6 +49,15 @@ make
 Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
+
+## Building for code coverage
+```
+sudo apt-get install lcov
+cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
+make
+make code_coverage
+```
+This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
 
 ## Working with Eclipse IDE ##
 
