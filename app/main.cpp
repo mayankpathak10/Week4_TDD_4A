@@ -19,7 +19,7 @@
 #include <cmath>
 
 // Controller class
-#include "lib.hpp"
+#include "controller.hpp"
 /**
  * @brief      Main function that implements Controller class
  *

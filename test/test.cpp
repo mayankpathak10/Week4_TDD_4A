@@ -14,7 +14,7 @@
 
 #include <gtest/gtest.h>
 #include <memory>
-#include "lib.hpp"
+#include "controller.hpp"
 
 std::shared_ptr<Controller>
     PID_Controller;  ///< Shared pointer for Controller class as PID_Controller

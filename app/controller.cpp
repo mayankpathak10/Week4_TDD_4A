@@ -13,7 +13,7 @@
  * @dependencies: This file needs "lib.hpp"
  */
 
-#include "lib.hpp"
+#include "controller.hpp"
 
 // Default constructor
 Controller::Controller() {
